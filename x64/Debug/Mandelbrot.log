@@ -1,0 +1,6 @@
+﻿  Mandelbrot.cpp
+C:\Users\danke\source\repos\Mandelbrot\Mandelbrot\Mandelbrot.cpp(11,22): warning C4244: 'argument': conversion from 'double' to 'unsigned int', possible loss of data
+C:\Users\danke\source\repos\Mandelbrot\Mandelbrot\Mandelbrot.cpp(11,15): warning C4244: 'argument': conversion from 'double' to 'unsigned int', possible loss of data
+C:\Users\danke\source\repos\Mandelbrot\Mandelbrot\Mandelbrot.cpp(14,35): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\danke\source\repos\Mandelbrot\Mandelbrot\Mandelbrot.cpp(14,28): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  Mandelbrot.vcxproj -> C:\Users\danke\source\repos\Mandelbrot\Mandelbrot\x64\Debug\Mandelbrot.exe
