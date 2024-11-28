@@ -1,8 +1,5 @@
 // Mandelbrot.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include "ComplexPlane.h"
-
 
 int main()
 {
@@ -14,11 +11,13 @@ int main()
 	ComplexPlane ComplexPlane(width, height);
 
 	Font font;
-	font.loadFromFile("fonts/ARIAL.TTF");
+	if (!font.loadFromFile("fonts/ARIAL.TTF"))
+	{
+		return -1;
+	}
 
 	Text text;
 	text.setFont(font);
-
 
 	while (window.isOpen())
 	{
@@ -37,14 +36,14 @@ int main()
 
 				if (event.mouseButton.button == Mouse::Left)
 				{
-					ComplexPlane.zoomIn();
 					ComplexPlane.setCenter(mousePixel);
+					ComplexPlane.zoomIn();
 				}
 
 				if (event.mouseButton.button == Mouse::Right)
 				{
-					ComplexPlane.zoomOut();
 					ComplexPlane.setCenter(mousePixel);
+					ComplexPlane.zoomOut();
 				}
 			}
 
@@ -59,6 +58,7 @@ int main()
 				window.close();
 			}
 		}
+
 		ComplexPlane.updateRender();
 		ComplexPlane.loadText(text);
 
@@ -69,4 +69,5 @@ int main()
 
 		window.display();
 	}
+	return 0;
 }
